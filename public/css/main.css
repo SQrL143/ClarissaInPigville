@@ -9,17 +9,17 @@ body {
     text-align:center;
 }
 
-.mona-images {
+.clarissa-images {
     max-width: 400px;
     max-height: 400px;
     border: 8px solid #fff;
 }
 
-.haiku-containers {
+. story-containers {
     padding: 10px 0px 20px 0px;
 }
 
-.haikus {
+.stories {
     font-size: 18px;
     white-space: pre-wrap;
 }
@@ -30,7 +30,7 @@ body {
         max-height: 340px;
     }
 
-    .haikus {
+    .stories {
         font-size: 22px;
     }
 }
