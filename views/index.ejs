@@ -1,27 +1,24 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Clarissa in Pigville: Sopping with Nana</title>
-    <link href="/css/main.css" rel="stylesheet" type="text/css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:title" content="Clarissa in Pigville: Shopping with Nana">
-    <meta property="og:description" content="Page images for the story">
-    <meta property="og:image" content="/images/sunlight.jpg">
-  </head>
-  <body>
-    <h1>Clarissa in Pigbille</h1>
-    <h2>Shopping with Nana</h2>
-    <div>
-      <% for(var i=0; i < stories.length; i++) { %>
-        <img
-          class="clarissa-images"
-          src="images/<%= stories[i].image %>" />
-        <div 
-          class="story-containers">
-          <p 
-            class="stories"
-          ><%- stories[i].text %></p>
-        </div>
-      <% } %>
-    </div>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Story Time</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h1>Story Time</h1>
+  <h2>Stories</h2>
+  <% for(let i=0; i < stories.length; i++) { %>
+    <h3>
+      <%= stories[i].title %>
+    </h3>
+    <p>
+      <%= stories[i].story %>
+    </p>
+    <img src="<%= stories[i].image %>">
+    <% } %>
+</body>
+
 </html>
