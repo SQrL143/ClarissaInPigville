@@ -5,7 +5,7 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const fs = require('fs');
-
+const port = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post('/submit', (req, res) => {
@@ -22,4 +22,4 @@ app.post('/submit', (req, res) => {
     });
 });
 
-app.listen(3000);
+app.listen(port);

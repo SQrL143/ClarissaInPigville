@@ -7,7 +7,14 @@ const port = process.env.PORT || 3000;
 app.use(express.static('public'))
 app.set('view engine', 'ejs');
 
-app.get('/', (req, res) => {
+// create a route to handle the admin.ejs page
+//explain this code block
+
+app.get('/admin', (req, res) => {
+    req.session.admin = true;
+    req._construct = true;
+    res.send('This is the admin page');
+
     res.render('admin', { stories: stories });
 });
 
